@@ -22,7 +22,7 @@ const verifyToken = (req, res, next) => {
     next();
   });
 };
-
+app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 app.use(express.static("public"));
@@ -34,7 +34,7 @@ app.get("/", (req, res) => {
 
 app.use("/auth", require("./controllers/authController.js"));
 app.use("/users", require("./controllers/usersController.js"));
-
+app.use("/recipes", verifyToken, require("./controllers/recipesController.js"));
 app.listen(process.env.PORT, () => {
   console.log("Nodemon listening");
 });
