@@ -8,19 +8,16 @@
   </head>
 
   <body>
-    <h1>Recipe Show Page</h1>
-    This recipe is for <%= recipe.recipeName %>. It was added by
-    <%=recipe.User.name%>
+    <h1>Recipe Details Page</h1>
+    <h3>
+      This recipe is for <%= recipe.recipeName %>.  It was added by
+      <%=recipe.User.name%>
+    </h3>
+    <div class="transbox">
+     <p>Ingredients:<br /><br /><%=recipe.ingredients%></p2>
     <br />
-    Recipe:<br />
-    <input type="text" name="recipeName" value="<%=recipe.recipeName%>" />
-    <br />
-    Ingredients:<br />
-    <p><%=recipe.ingredients%></p>
-
-    <br />
-    Instructions:<br />
-    <input type="text" name="instructions" value="<%=recipe.instructions%>" />
+    <p>Instructions:<br /><br /><%=recipe.instructions%></p3>
+    </div>
     <br />
     <form action="/recipes/<%=recipe.id %>?_method=DELETE" method="POST">
       <input type="submit" value="DELETE <%= recipe.recipeName %>" />

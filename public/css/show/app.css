@@ -36,11 +36,25 @@ h3 {
   font-size: 25px;
   text-shadow: 4px 4px 6px black;
   text-align: center;
-  padding: 100px;
 }
 
-form {
+p {
   color: orange;
   font-size: 25px;
   text-shadow: 4px 4px 6px black;
+  width: 600px;
+}
+
+div.transbox {
+  /* margin: 30px; */
+  background-color: grey;
+  border: 5px solid black;
+  opacity: 0.7;
+}
+
+div.transbox p {
+  text-align: center;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-weight: bolder;
 }

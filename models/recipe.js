@@ -17,6 +17,7 @@ module.exports = (sequelize, DataTypes) => {
       ingredients: DataTypes.TEXT,
       instructions: DataTypes.TEXT,
       userId: DataTypes.INTEGER,
+      typeOfMeat: DataTypes.TEXT,
     },
     {
       sequelize,

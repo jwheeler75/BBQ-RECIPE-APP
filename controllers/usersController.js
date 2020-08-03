@@ -9,10 +9,11 @@ router.get("/profile/:id", (req, res) => {
     include: [
       {
         model: RecipeModel,
-        attributes: ["recipeName"],
+        attributes: ["recipeName", "typeOfMeat"],
       },
     ],
   }).then((userProfile) => {
+    console.log(userProfile);
     res.render("users/profile.ejs", {
       user: userProfile,
     });

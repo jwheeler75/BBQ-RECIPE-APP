@@ -9,23 +9,20 @@
 
 <body>
     <h1>Recipes Index Page</h1>
-
     <nav>
         <a href="/recipes/new">Create a New Recipe</a>
-    </nav>
-
-    <ul>
+    </nav><br />
+        <ul>
         <% for(let i=0; i<recipe.length; i++) { %>
         <li>
             <a href="/recipes/<%=recipe[i].id%>"> <%=recipe[i].recipeName%> </a>
-            <!--  ADD DELETE FORM HERE-->
             <form action="/recipes/<%=recipe[i].id %>?_method=DELETE" method="POST">
                 <input type="submit" value="DELETE Recipe" />
             </form>
-            <!-- Add edit link here  -->
             <a href="/recipes/<%=recipe[i].id %>/edit">Edit</a>
-        </li>
+        </li><br /> <br />
         <% } %>
+        
     </ul>
 </body>
 

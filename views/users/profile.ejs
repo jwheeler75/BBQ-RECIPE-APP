@@ -17,9 +17,10 @@
       Password:
       <input type="password" name="password" value="<%=user.password%>" /><br />
       <input type="submit" value="Edit Profile" />
-      <form action="/users/<%= user.id %>?_method=DELETE" method="POST">
-        <input type="submit" value="Delete User" />
-      </form>
+    </form>
+    <form action="/users/<%= user.id %>?_method=DELETE" method="POST">
+      <input type="submit" value="Delete User" />
+    </form>
     <br />
     <a href="/recipes">View All Recipes</a>
     <h3>Recipes added by you:</h3>
@@ -28,10 +29,11 @@
       <a href="/recipes/<%=user.Recipes[i].id%>"
         ><%=user.Recipes[i].recipeName%></a
       >
-      </li>
+    </li>
     <br />
     <% } %>
     <br />
+
     <a href="/">Back to Homepage</a>
   </body>
 </html>
