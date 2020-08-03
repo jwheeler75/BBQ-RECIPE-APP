@@ -3,17 +3,27 @@
   <head>
     <meta charset="utf-8" />
     <title>BBQ Recipe App</title>
-    <link rel="stylesheet" href="/css/app.css" />
+    <link rel="stylesheet" href="/css/new/app.css" />
   </head>
 
   <body>
     <h1>New Recipe Page</h1>
     <!--  NOTE: action will be the route, method will be the HTTP verb-->
     <form action="/recipes" method="POST">
-      User Id: <input type="text" name="userId" /> Recipe Name:
-      <input type="text" name="recipeName" /><br />
-      Ingredients: <input type="text" name="ingredients" /><br />
-      Instructions: <input type="text" name="instructions" /><br />
+      User Id: <textarea rows="1" cols="5" name="userId"></textarea> Recipe
+      Name: <textarea rows="1" cols="50" name="recipeName"></textarea><br />
+      Ingredients: <br /><textarea
+        rows="10"
+        cols="50"
+        name="ingredients"
+      ></textarea
+      ><br />
+      Instructions: <br /><textarea
+        rows="10"
+        cols="50"
+        name="instructions"
+      ></textarea
+      ><br />
       <input type="submit" name="" value="Create Recipe" />
     </form>
   </body>

@@ -3,13 +3,12 @@
   <head>
     <meta charset="utf-8" />
     <title>BBQ Recipe App</title>
-    <link rel="stylesheet" href="/css/app.css" />
+    <link rel="stylesheet" href="/css/edit/app.css" />
   </head>
 
   <body>
     <h1>Edit Recipe Page</h1>
     <form action="/recipes/<%=recipe.id%>?_method=PUT" method="POST">
-      <!--  NOTE: the form is pre-populated with values for the server-->
       Recipe:<br />
       <input type="text" name="recipeName" value="<%=recipe.recipeName%>" />
       <br />

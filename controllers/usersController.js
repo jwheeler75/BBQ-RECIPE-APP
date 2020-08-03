@@ -9,7 +9,7 @@ router.get("/profile/:id", (req, res) => {
     include: [
       {
         model: RecipeModel,
-        attributes: ["id", "recipeName"],
+        attributes: ["recipeName"],
       },
     ],
   }).then((userProfile) => {

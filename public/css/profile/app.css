@@ -1,0 +1,50 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background: url("/images/BackgroundImage.jpg");
+  background-repeat: no-repeat;
+}
+a:link,
+a:visited {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+a:hover,
+a:active {
+  background-color: orange;
+  box-shadow: 0 5px #666;
+}
+
+h1 {
+  color: orange;
+  font-size: 50px;
+  text-shadow: 4px 4px 6px #000000;
+}
+
+h3 {
+  color: orange;
+  font-size: 25px;
+  text-shadow: 4px 4px 6px black;
+  text-align: center;
+  /* padding: 100px; */
+}
+
+form {
+  color: orange;
+  font-size: 25px;
+  text-shadow: 4px 4px 6px black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}

@@ -4,13 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BBQ Recipe App</title>
-    <link rel="stylesheet" href="/css/app.css" />
+    <link rel="stylesheet" href="/css/show/app.css" />
   </head>
 
   <body>
     <h1>Recipe Show Page</h1>
     This recipe is for <%= recipe.recipeName %>. It was added by
     <%=recipe.User.name%>
+    <br />
+    Recipe:<br />
+    <input type="text" name="recipeName" value="<%=recipe.recipeName%>" />
+    <br />
+    Ingredients:<br />
+    <p><%=recipe.ingredients%></p>
+
+    <br />
+    Instructions:<br />
+    <input type="text" name="instructions" value="<%=recipe.instructions%>" />
     <br />
     <form action="/recipes/<%=recipe.id %>?_method=DELETE" method="POST">
       <input type="submit" value="DELETE <%= recipe.recipeName %>" />
