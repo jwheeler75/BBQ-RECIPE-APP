@@ -13,7 +13,6 @@ router.get("/profile/:id", (req, res) => {
       },
     ],
   }).then((userProfile) => {
-    console.log(userProfile);
     res.render("users/profile.ejs", {
       user: userProfile,
     });

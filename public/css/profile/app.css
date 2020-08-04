@@ -4,7 +4,7 @@ body {
   justify-content: space-around;
   align-items: center;
   background: url("/images/BackgroundImage.jpg");
-  background-repeat: no-repeat;
+  background-repeat: repeat-y;
 }
 a:link,
 a:visited {
@@ -36,7 +36,6 @@ h3 {
   font-size: 25px;
   text-shadow: 4px 4px 6px black;
   text-align: center;
-  /* padding: 100px; */
 }
 
 form {

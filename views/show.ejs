@@ -11,7 +11,7 @@
     <h1>Recipe Details Page</h1>
     <h3>
       This recipe is for <%= recipe.recipeName %>.  It was added by
-      <%=recipe.User.name%>
+      <%=recipe.User.name%>.
     </h3>
     <div class="transbox">
      <p>Ingredients:<br /><br /><%=recipe.ingredients%></p2>
@@ -22,5 +22,8 @@
     <form action="/recipes/<%=recipe.id %>?_method=DELETE" method="POST">
       <input type="submit" value="DELETE <%= recipe.recipeName %>" />
     </form>
+    <nav>
+      <a href="/recipes/">Back to Recipes Index</a>
+    </nav>
   </body>
 </html>

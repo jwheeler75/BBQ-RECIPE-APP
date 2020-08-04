@@ -4,7 +4,7 @@ body {
   justify-content: space-around;
   align-items: center;
   background: url("/images/BackgroundImage.jpg");
-  background-repeat: no-repeat;
+  background-repeat: repeat-y;
 }
 a:link,
 a:visited {
