@@ -9,21 +9,29 @@
     <h1>Edit Recipe Page</h1>
     <form action="/recipes/<%=recipe.id%>?_method=PUT" method="POST">
       Type of Meat:<br />
-      <input type="text" name="typeOfMeat" value="<%=recipe.typeOfMeat%>" />
+      <textarea rows="1" cols="10">
+      <%=recipe.typeOfMeat%>
+      </textarea>
       <br />
       Recipe:<br />
-      <input type="text" name="recipeName" value="<%=recipe.recipeName%>" />
+      <textarea rows="1" cols="40">
+       <%=recipe.recipeName%>
+      </textarea>
       <br />
       Ingredients:<br />
-      <input
-        type="text"
-        name="ingredients"
-        value="<%=recipe.ingredients%>"
-      /><br />
+      <textarea rows="10" cols="50">
+      <%=recipe.ingredients%>
+      </textarea>
+      <br />
       Instructions:<br />
-      <input type="text" name="instructions" value="<%=recipe.instructions%>" />
+      <textarea rows="40" cols="50">
+      <%=recipe.instructions%>
+      </textarea>
       <br />
       <input type="submit" name="" value="Submit Changes" />
     </form>
+    <nav>
+      <a href="/recipes/">Back to Recipes Index</a>
+    </nav>
   </body>
 </html>

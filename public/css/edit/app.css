@@ -43,4 +43,8 @@ form {
   color: orange;
   font-size: 25px;
   text-shadow: 4px 4px 6px black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
