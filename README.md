@@ -4,75 +4,67 @@
 
 
 ## Project Description
-
-Use this section to describe your final project and perhaps any links to relevant sites that help convey the concept and\or functionality.
+This is a full stack BBQ Recipe App built using Node.js, Postgres, Express, EJS, and Sequelize.  It has a one to many relationship in the db, and it uses JWT for user authorization.   
 
 ## Project Links
 
-- [github repo]()
+- https://github.com/jwheeler75/BBQ-RECIPE-APP
 - [deployment]()
 
 ## Wireframes
 
-Upload images of wireframe to cloudinary and add the link here with a description of the specific wireframe.
+This is the wireframe for the Recipe Index Page.
 
-- [wireframes]()
-- [react architecture]()
+- https://github.com/jwheeler75/BBQ-RECIPE-APP/blob/master/images/IMG_2675.JPG
+
+## User Stories
+- As a user, I should have a Signup Page to create a new account.
+- As a user, I should have a Login Page to login to my a account.
+- As a user, I should have a Login Page to logout to my a account. 
+- As a user, I should have a user profile page that allows me to edit my user information.
+- As a user, I should able to search through a list of all recipe names and choose a recipe to view.
+- As a user, I should be able to create a new recipe. 
+- As a user, I should be able to edit a recipe. 
+- As a user, I should be able to delete a recipe. 
+- As a user, I should be able easily navigate between pages.
+- As a user, I should be able to see a list of recipes added by me.
 
 
+### MVP/PostMVP
 
-Define the the React components and the architectural design of your app.
+ #### MVP
+- Create one model with all 7 RESTful routes and full CRUD.
+- 2 models that are associated in one-to-many relationship. 
+- Render data on User Profile, Recipe Index, and Recipe Show pages.
+- Allow user to interact with all pages.
 
-### MVP/PostMVP - 5min
+#### PostMVP
 
-The functionality will then be divided into two separate lists: MPV and PostMVP.  Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.  
+- Create a page where each user can store their favorite recipes.
+- Show a picture of each recipe.
 
-#### MVP EXAMPLE
-- Find and use external api 
-- Render data on page 
-- Allow user to interact with the page
-
-#### PostMVP EXAMPLE
-
-- Add localStorage or firebase for storage
-
-## Components
-##### Writing out your components and its descriptions isn't a required part of the proposal but can be helpful.
-
-Based on the initial logic defined in the previous sections try and breakdown the logic further into stateless/stateful components. 
-
-| Component | Description | 
-| --- | :---: |  
-| App | This will make the initial data pull and include React Router| 
-| Header | This will render the header include the nav | 
-| Footer | This will render the header include the nav | 
-
-## Time Frames
-
-Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe. Also, put a gif at the top of your Readme before you pitch, and you'll get a panda prize.
-
-| Component | Priority | Estimated Time | Time Invetsted | Actual Time |
-| --- | :---: |  :---: | :---: | :---: |
-| Adding Form | H | 3hrs| 3.5hrs | 3.5hrs |
-| Working with API | H | 3hrs| 2.5hrs | 2.5hrs |
-| Total | H | 6hrs| 5hrs | 5hrs |
-
-## Additional Libraries
- Use this section to list all supporting libraries and thier role in the project such as Axios, ReactStrap, D3, etc. 
 
 ## Code Snippet
 
-Use this section to include a brief code snippet of functionality that you are proud of an a brief description.  Code snippet should not be greater than 10 lines of code. 
+This code allows you create multiline form input.  In this application, I'm also prepopulating the input boxes with a value from the db.
 
-```
-function reverse(string) {
-	// here is the code to reverse a string of text
-}
-```
+<form action="/recipes/<%=recipe.id%>?_method=PUT" method="POST">
+    Type of Meat:<br />
+    <textarea rows="1" cols="8"><%=recipe.typeOfMeat%></textarea>
+    <br />
+    Recipe:<br />
+    <textarea name="recipeName" rows="1" cols="40"><%=recipe.recipeName%></textarea>
+    <br />
+    Ingredients:<br />
+    <textarea name="ingredients" rows="10" cols="50"><%=recipe.ingredients%></textarea>
+    <br />
+    Instructions:<br />
+    <textarea name="instructions" rows="40" cols="50"><%=recipe.instructions%></textarea>
+    <br />
+    <input type="submit" name="" value="Submit Changes" />
+  </form>
 
 ## Issues and Resolutions
- Use this section to list of all major issues encountered and their resolution.
 
-#### SAMPLE.....
-**ERROR**: app.js:34 Uncaught SyntaxError: Unexpected identifier                                
-**RESOLUTION**: Missing comma after first object in sources {} object
+**ERROR**: Unwanted spacing in the textarea boxes causing issues with hardcoded drop box options.                               
+**RESOLUTION**: Using the prettier extention in VS Code moved the input value to the next line, and I indented it to make it flow with the rest of the code.  This added the unwanted spaces when it was rendered.
