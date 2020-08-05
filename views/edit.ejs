@@ -9,22 +9,22 @@
     <h1>Edit Recipe Page</h1>
     <form action="/recipes/<%=recipe.id%>?_method=PUT" method="POST">
       Type of Meat:<br />
-      <textarea rows="1" cols="10">
+      <textarea name="typeOfMeat" rows="1" cols="10">
       <%=recipe.typeOfMeat%>
       </textarea>
       <br />
       Recipe:<br />
-      <textarea rows="1" cols="40">
+      <textarea name="recipeName" rows="1" cols="40">
        <%=recipe.recipeName%>
       </textarea>
       <br />
       Ingredients:<br />
-      <textarea rows="10" cols="50">
+      <textarea name="ingredients" rows="10" cols="50">
       <%=recipe.ingredients%>
       </textarea>
       <br />
       Instructions:<br />
-      <textarea rows="40" cols="50">
+      <textarea names="instructions" rows="40" cols="50">
       <%=recipe.instructions%>
       </textarea>
       <br />

@@ -26,14 +26,9 @@
     <h3>Recipes added by you:</h3>
     <% for (let i = 0; i < user.Recipes.length; i++){ %>
     <li>
-      <a href="/recipes/<%=user.Recipes[i].id%>"
-        ><%=user.Recipes[i].recipeName%></a
-      >
+      <p><%=user.Recipes[i].recipeName%></p>
     </li>
-    <br />
     <% } %>
-    <br />
-
     <a href="/">Back to Homepage</a>
   </body>
 </html>

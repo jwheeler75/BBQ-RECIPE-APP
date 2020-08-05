@@ -11,11 +11,18 @@ router.get("/new", (req, res) => {
   res.render("new.ejs");
 });
 
-// INDEX ROUTE - GET ALL THE RECIPES
+// INDEX ROUTE - Enabled so Nothing is returned So user can choose Meat from Drop Down
+// or select the All Meats option link.
 router.get("/", (req, res) => {
-  RecipeModel.findAll().then((recipes) => {
+  res.render("index.ejs", {
+    recipe: [],
+  });
+});
+// Index Route - To Get All Recipes for the All Recipe Link
+router.get("/allrecipes", (req, res) => {
+  RecipeModel.findAll().then((allrecipes) => {
     res.render("index.ejs", {
-      recipe: recipes,
+      recipe: allrecipes,
     });
   });
 });
@@ -41,6 +48,17 @@ router.post("/", (req, res) => {
   RecipeModel.create(req.body).then((newRecipe) => {
     res.redirect("/recipes");
   });
+});
+
+// Custom Post Route to display Selected meat from the drop down box
+router.post("/bytypeofmeat", (req, res) => {
+  RecipeModel.findAll({ where: { typeOfMeat: req.body.typeOfMeat } }).then(
+    (foundMeat) => {
+      res.render("index.ejs", {
+        recipe: foundMeat,
+      });
+    }
+  );
 });
 
 router.get("/:id/edit", function (req, res) {
