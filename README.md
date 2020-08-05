@@ -1,4 +1,6 @@
-# Project Overview
+# BBQ Recipe App
+
+## Project Overview
 
 
 ## Project Description
