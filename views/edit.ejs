@@ -1,37 +1,33 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <title>BBQ Recipe App</title>
-    <link rel="stylesheet" href="/css/edit/app.css" />
-  </head>
-  <body>
-    <h1>Edit Recipe Page</h1>
-    <form action="/recipes/<%=recipe.id%>?_method=PUT" method="POST">
-      Type of Meat:<br />
-      <textarea name="typeOfMeat" rows="1" cols="10">
-      <%=recipe.typeOfMeat%>
-      </textarea>
-      <br />
-      Recipe:<br />
-      <textarea name="recipeName" rows="1" cols="40">
-       <%=recipe.recipeName%>
-      </textarea>
-      <br />
-      Ingredients:<br />
-      <textarea name="ingredients" rows="10" cols="50">
-      <%=recipe.ingredients%>
-      </textarea>
-      <br />
-      Instructions:<br />
-      <textarea names="instructions" rows="40" cols="50">
-      <%=recipe.instructions%>
-      </textarea>
-      <br />
-      <input type="submit" name="" value="Submit Changes" />
-    </form>
-    <nav>
-      <a href="/recipes/">Back to Recipes Index</a>
-    </nav>
-  </body>
+
+<head>
+  <meta charset="utf-8" />
+  <title>BBQ Recipe App</title>
+  <link rel="stylesheet" href="/css/edit/app.css" />
+</head>
+
+<body>
+  <h1>Edit Recipe Page</h1>
+  <h5>First Letter of Meat Must be Captialized</h5>
+  <form action="/recipes/<%=recipe.id%>?_method=PUT" method="POST">
+    Type of Meat:<br />
+    <textarea rows="1" cols="8"><%=recipe.typeOfMeat%></textarea>
+    <br />
+    Recipe:<br />
+    <textarea name="recipeName" rows="1" cols="40"><%=recipe.recipeName%></textarea>
+    <br />
+    Ingredients:<br />
+    <textarea name="ingredients" rows="10" cols="50"><%=recipe.ingredients%></textarea>
+    <br />
+    Instructions:<br />
+    <textarea name="instructions" rows="40" cols="50"><%=recipe.instructions%></textarea>
+    <br />
+    <input type="submit" name="" value="Submit Changes" />
+  </form>
+  <nav>
+    <a href="/recipes/">Back to Recipes Index</a>
+  </nav>
+</body>
+
 </html>

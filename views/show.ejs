@@ -1,29 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BBQ Recipe App</title>
-    <link rel="stylesheet" href="/css/show/app.css" />
-  </head>
 
-  <body>
-    <h1>Recipe Details Page</h1>
-    <h3>
-      This recipe is for <%= recipe.recipeName %>.  It was added by
-      <%=recipe.User.name%>.
-    </h3>
-    <div class="transbox">
-     <p>Ingredients:<br /><br /><%=recipe.ingredients%></p2>
-    <br />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BBQ Recipe App</title>
+  <link rel="stylesheet" href="/css/show/app.css" />
+</head>
+
+<body>
+  <h1>Recipe Details Page</h1>
+  <h3>
+    This recipe is for <%= recipe.recipeName %>. It was added by
+    <%=recipe.User.name%>.
+  </h3>
+  <div class="transbox">
+    <p>Ingredients:<br /><br /><%=recipe.ingredients%></p2>
+      <br />
     <p>Instructions:<br /><br /><%=recipe.instructions%></p3>
-    </div>
-    <br />
-    <form action="/recipes/<%=recipe.id %>?_method=DELETE" method="POST">
-      <input type="submit" value="DELETE <%= recipe.recipeName %>" />
-    </form>
-    <nav>
-      <a href="/recipes/">Back to Recipes Index</a>
-    </nav>
-  </body>
+  </div>
+  <br />
+  <form action="/recipes/<%=recipe.id %>?_method=DELETE" method="POST">
+    <input type="submit" value="DELETE <%= recipe.recipeName %>" />
+  </form>
+  <br />
+  <nav>
+    <a href="/recipes/">Back to Recipes Index</a>
+  </nav>
+</body>
+
 </html>

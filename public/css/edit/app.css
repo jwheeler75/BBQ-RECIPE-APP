@@ -1,7 +1,6 @@
 body {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   align-items: center;
   background: url("/images/BackgroundImage.jpg");
   background-repeat: repeat-y;
@@ -31,13 +30,11 @@ h1 {
   text-shadow: 4px 4px 6px #000000;
 }
 
-h3 {
+h5 {
   color: orange;
-  font-size: 25px;
+  font-size: 15px;
   text-shadow: 4px 4px 6px black;
-  text-align: center;
-  padding: 100px;
-}
+  }
 
 form {
   color: orange;
@@ -45,6 +42,5 @@ form {
   text-shadow: 4px 4px 6px black;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   align-items: center;
 }
