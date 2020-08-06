@@ -10,8 +10,14 @@
 <body>
   <h1>New Recipe Page</h1>
   <form action="/recipes" method="POST">
-    </textarea>Type of
-    Meat: <textarea rows="1" cols="10" name="typeOfMeat"></textarea><br />
+    <label for="typeOfMeat">Type of Meat:</label>
+    <select name="typeOfMeat">
+      <option value="none">--Meat--</option>
+      <option value="Beef">Beef</option>
+      <option value="Chicken">Chicken</option>
+      <option value="Fish">Fish</option>
+      <option value="Pork">Pork</option>
+    </select>
     Recipe Name: <textarea rows="1" cols="50" name="recipeName"></textarea><br />
     Ingredients: <br /><textarea rows="10" cols="50" name="ingredients"></textarea><br />
     Instructions: <br /><textarea rows="10" cols="50" name="instructions"></textarea><br />
