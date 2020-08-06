@@ -9,10 +9,18 @@
 
 <body>
   <h1>Edit Recipe Page</h1>
-  <h5>First Letter of Meat Must be Captialized</h5>
   <form action="/recipes/<%=recipe.id%>?_method=PUT" method="POST">
-    Type of Meat:<br />
-    <textarea name="typeOfMeat" rows="1" cols="8"><%=recipe.typeOfMeat%></textarea>
+    <label for="typeOfMeat">Type of Meat:</label>
+    <select name="typeOfMeat">
+      <option value="<%=recipe.typeOfMeat%>"><%=recipe.typeOfMeat%></option>
+      <%let choices = ["Beef", "Chicken", "Fish", "Pork"] %>
+      <% for (let i=0; i<choices.length; i++){ %>
+      <% if (choices[i] !== recipe.typeOfMeat){ %>
+      <option value="<%=choices[i]%>"><%=choices[i]%></option>
+      <% } else { %>
+      <% } %>
+      <% } %>
+    </select>
     <br />
     Recipe:<br />
     <textarea name="recipeName" rows="1" cols="40"><%=recipe.recipeName%></textarea>
