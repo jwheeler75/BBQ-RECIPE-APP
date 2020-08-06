@@ -9,7 +9,7 @@ This is a full stack BBQ Recipe App built using Node.js, Postgres, Express, EJS,
 ## Project Links
 
 - https://github.com/jwheeler75/BBQ-RECIPE-APP
-- [deployment]()
+- https://bbq-recipe-app.herokuapp.com/recipes
 
 ## Wireframes
 
