@@ -21,10 +21,11 @@
   </div>
   <br />
   <form action="/recipes/<%=recipe.id %>?_method=DELETE" method="POST">
-    <input type="submit" value="DELETE <%= recipe.recipeName %>" />
+    <input type="submit" value="Delete <%=recipe.recipeName%>" />
   </form>
   <br />
   <nav>
+    <a href="/recipes/<%=recipe.id%>/edit">Edit <%=recipe.recipeName%></a>
     <a href="/recipes/">Back to Recipes Index</a>
   </nav>
 </body>
