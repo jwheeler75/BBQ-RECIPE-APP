@@ -8,10 +8,10 @@ const UserModel = require("../models").User;
 
 // NEW ROUTE - SEND EMPTY FORM
 router.get("/new", (req, res) => {
-  res.render("new.ejs", {
-    userId: req.user.id,
-  });
+  res.render("new.ejs");
+  // userId: req.user.id,
 });
+
 
 // INDEX ROUTE - Enabled so Nothing is returned So user can choose Meat from Drop Down
 // or select the All Meats option link.
