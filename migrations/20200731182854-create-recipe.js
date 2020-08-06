@@ -30,6 +30,9 @@ module.exports = {
         type: Sequelize.DATE,
         defaultValue: new Date(),
       },
+      typeOfMeat: {
+        type: Sequelize.TEXT,
+      },
     });
   },
   down: async (queryInterface, Sequelize) => {
