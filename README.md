@@ -8,8 +8,8 @@ This is a full stack BBQ Recipe App built using Node.js, Postgres, Express, EJS,
 
 ## Project Links
 
-- https://github.com/jwheeler75/BBQ-RECIPE-APP
-- https://bbq-recipe-app.herokuapp.com/recipes
+- GitHub Repo URL https://github.com/jwheeler75/BBQ-RECIPE-APP
+- Heroku Production URL https://bbq-recipe-app.herokuapp.com/recipes
 
 ## Wireframes
 
