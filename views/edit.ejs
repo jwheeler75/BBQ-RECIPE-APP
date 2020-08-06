@@ -12,7 +12,7 @@
   <h5>First Letter of Meat Must be Captialized</h5>
   <form action="/recipes/<%=recipe.id%>?_method=PUT" method="POST">
     Type of Meat:<br />
-    <textarea rows="1" cols="8"><%=recipe.typeOfMeat%></textarea>
+    <textarea name="typeOfMeat" rows="1" cols="8"><%=recipe.typeOfMeat%></textarea>
     <br />
     Recipe:<br />
     <textarea name="recipeName" rows="1" cols="40"><%=recipe.recipeName%></textarea>
