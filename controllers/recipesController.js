@@ -8,8 +8,9 @@ const UserModel = require("../models").User;
 
 // NEW ROUTE - SEND EMPTY FORM
 router.get("/new", (req, res) => {
-  res.render("new.ejs");
-  // userId: req.user.id,
+  res.render("new.ejs", {
+    userId: req.user.id,
+  });
 });
 
 
